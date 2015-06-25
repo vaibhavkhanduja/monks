@@ -20,11 +20,11 @@ new: clean all
 clean:
 	make -C $(KDIR) M=$(shell pwd) clean
 	@rm -rf ../common/*.o ../udis86/libudis86/*.o
-	@rm -rf ../$(NAME).ko
+	@rm -rf ../bin/$(NAME).ko
 
 all: _prebuild
 	make -C $(KDIR) M=$(shell pwd)
-	@mv $(NAME).ko ../$(NAME).ko
+	@mv $(NAME).ko ../bin/$(NAME).ko
 
 _prebuild: unistd_32.h max_syscalls.h
 
