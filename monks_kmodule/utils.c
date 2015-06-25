@@ -57,7 +57,7 @@ char *path_from_fd(unsigned int fd){
 	}
 
 	path = file->f_path;
-	path_get(&file->f_path);
+	path_get(&path);
 	spin_unlock(&files->file_lock);
 	
 	tmp = (char *)__get_free_page(GFP_TEMPORARY);

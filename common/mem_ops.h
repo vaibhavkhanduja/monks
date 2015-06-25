@@ -5,6 +5,9 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/slab.h>
+#include <linux/vmalloc.h>
+#include <linux/dcache.h>
+#include <linux/fs.h>
 #else
 #include <stdlib.h>
 #include <stdio.h>
